@@ -17,5 +17,5 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  base: process.env.NODE_ENV === 'production' ? '/pages/gnoa3/CS6750-WorkoutTracker/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/workout-tracker' : '/',
 }) 
