@@ -7,8 +7,8 @@ export default function WorkoutList() {
   const { workouts } = useWorkouts()
 
   return (
-    <div className="container mx-auto px-4 py-4 sm:py-8 min-h-screen">
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-6 sm:mb-8">
+    <div className="container mx-auto px-4 py-4">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
         <h1 className="text-2xl sm:text-3xl font-bold">Workout Tracker</h1>
         <Link
           to="/new-workout"
@@ -19,19 +19,19 @@ export default function WorkoutList() {
         </Link>
       </div>
 
-      <div className="grid gap-4 sm:gap-6">
+      <div className="grid gap-4">
         {workouts.map((workout) => (
           <Link
             key={workout.id}
             to={`/edit-workout/${workout.id}`}
-            className="bg-white p-4 sm:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+            className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
           >
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 mb-4">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 mb-2">
               <h2 className="text-lg sm:text-xl font-semibold">
                 {format(new Date(workout.date), 'MMMM d, yyyy')}
               </h2>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mb-2">
               {workout.exercises.map((exercise, index) => (
                 <span
                   key={index}
@@ -42,7 +42,7 @@ export default function WorkoutList() {
               ))}
             </div>
             {workout.notes && (
-              <div className="mt-4 text-gray-600">
+              <div className="mt-2 text-gray-600">
                 <p className="text-sm italic">"{workout.notes}"</p>
               </div>
             )}
