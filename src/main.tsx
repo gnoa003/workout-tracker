@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
-const basename = process.env.NODE_ENV === 'production' ? '/pages/gnoa3/CS6750-WorkoutTracker' : '/'
+const basename = process.env.NODE_ENV === 'production' ? '/workout-tracker' : '/'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
